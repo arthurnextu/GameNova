@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dead Cells - Présentation</title>
+    <link rel="stylesheet" href="dead_cell.css">
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+    <script>
+        fetch("../navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar-container").innerHTML = data;
+            });
+    </script>
+    <!-- Bannière avec image -->
+    <header class="banner">
+        <img src="bannerdeadcells.webp" alt="Bannière Dead Cells" class="banner-image">
+        <div class="overlay">
+            <h1>Dead Cells</h1>
+            <p>Un jeu d'action en 2D avec des éléments de roguelike où vous explorez un monde rempli de monstres, de pièges et de secrets.</p>
+        </div>
+    </header>
+
+    <!-- Présentation du jeu -->
+    <section class="presentation">
+        <div class="text">
+            <h2>À propos du jeu</h2>
+            <p>
+                Dead Cells est un jeu d'action 2D avec des éléments de roguelike et de Metroidvania. Le jeu vous place dans la peau d'un personnage sans nom, qui cherche à échapper à un château rempli de créatures dangereuses, de pièges et de secrets. Chaque nouvelle partie vous propose un défi unique avec des niveaux générés de manière procédurale.
+            </p>
+            <ul>
+                <li><strong>Développeur :</strong> Motion Twin</li>
+                <li><strong>Date de sortie :</strong> 7 août 2018</li>
+                <li><strong>Genres :</strong> Action, Roguelike, Metroidvania</li>
+                <li><strong>Plateformes :</strong> PC, Xbox, PS4, Switch, iOS, Android</li>
+                <li><strong>Type de jeu :</strong> Solo</li>
+            </ul>
+        </div>
+        <div class="image">
+            <img src="presentation.webp" alt="Dead Cells">
+        </div>
+    </section>
+
+    <!-- Personnages -->
+    <section class="characters">
+        <h2>Personnages Principaux</h2>
+        <div class="character-grid">
+            <div class="character">
+                <img src="personnage.webp" alt="Le Prisonnier">
+                <div class="info">
+                    <h3>Le Prisonnier</h3>
+                    <p>Le protagoniste de Dead Cells, un être sans nom qui renaît à chaque mort, toujours à la recherche de la liberté et de la vérité dans un monde en constante évolution.</p>
+                    <p><strong>Rôle :</strong> Prisonnier, combattant</p>
+                    <p><strong>Compétences :</strong> Maîtrise des armes, exploration, survie.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gameplay -->
+    <section class="gameplay">
+        <h2>Gameplay</h2>
+        <p>Dead Cells propose un gameplay intense où chaque partie est unique :</p>
+        <div class="gameplay-grid">
+            <div class="feature">
+                <h3>⚔️ Combat dynamique</h3>
+                <p>Affrontez des ennemis avec un système de combat fluide et varié. Utilisez des armes et des capacités uniques pour vaincre vos adversaires.</p>
+                <div class="image">
+                    <img src="combat.webp" alt="Combat Dead Cells">
+                </div>
+            </div>
+
+            <div class="feature">
+                <h3>🌍 Exploration</h3>
+                <p>Explorez un monde vaste et interconnecté, rempli de secrets, de chemins cachés et d'énigmes à résoudre.</p>
+                <div class="image">
+                    <img src="exploration.webp" alt="Exploration Dead Cells">
+                </div>
+            </div>
+            <div class="feature">
+                <h3>💀 Mort et renaissance</h3>
+                <p>Chaque mort dans Dead Cells est une opportunité d'apprendre et de progresser. Le monde change à chaque nouvelle tentative, offrant de nouveaux défis à chaque partie.</p>
+                <div class="image">
+                    <img src="mort.webp" alt="Mort et renaissance">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission principale -->
+    <section class="main-mission">
+        <h2>Mission Principale</h2>
+        <p>Dans **Dead Cells**, vous incarnez un prisonnier qui doit s'échapper d'une prison labyrinthique et affronter des ennemis puissants tout en apprenant les secrets du château. Chaque mort et chaque réincarnation permettent de progresser davantage, ouvrant de nouvelles possibilités d'exploration et de combat.</p>
+        
+        <div class="mission-details">
+            <div class="mission-item">
+                <h3>🔍 Exploration du château</h3>
+                <p>Explorez les différentes sections du château, trouvez des clés et des objets nécessaires pour progresser dans votre quête.</p>
+            </div>
+            <div class="mission-item">
+                <h3>💀 Combat contre les boss</h3>
+                <p>Affrontez des ennemis de plus en plus puissants et défiez des boss pour avancer dans le jeu et débloquer de nouvelles zones.</p>
+            </div>
+            <div class="mission-item">
+                <h3>⚔️ Maîtrise des armes</h3>
+                <p>Essayez différents types d'armes et de pouvoirs pour élaborer des stratégies efficaces contre vos ennemis et survivre plus longtemps.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carte du monde -->
+    <section id="map" class="section map">
+        <img src="map.webp" alt="Carte de Dead Cells" usemap="#site-map" class="image">
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 GameZone - Tous droits réservés</p>
+    </footer>
+
+</body>
+
+</html>

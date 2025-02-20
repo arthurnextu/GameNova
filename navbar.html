@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bleu-fonce: #1E2A47;
+            --bleu-neon: #00ADEF;
+            --argent-metal: #C1C1C1;
+            --blanc: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--argent-metal);
+            padding-top: 50px; 
+        }
+
+        nav {
+            background: var(--bleu-fonce);
+            color: var(--blanc);
+            padding: 10px 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000; 
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+        }
+
+        .menu li {
+            position: relative;
+            margin: 0 20px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: var(--blanc);
+            font-size: 16px;
+            font-weight: 500;
+            padding: 10px;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease, transform 0.3s ease;
+            text-shadow: 0 0 5px var(--bleu-neon), 0 0 10px var(--bleu-neon), 0 0 15px var(--bleu-neon);
+        }
+
+        /* Effet de soulignement néon et bordure néon */
+        .menu a:hover {
+            color: var(--blanc);
+            transform: scale(1.1);
+            text-shadow: 0 0 5px var(--bleu-neon), 0 0 15px var(--bleu-neon), 0 0 25px var(--bleu-neon); 
+            box-shadow: 0 0 10px var(--bleu-neon), 0 0 15px var(--bleu-neon), 0 0 20px var(--bleu-neon); 
+            border-radius: 20px;
+        }
+
+        /* Gestion du sous-menu (dropdown) */
+        .dropdown {
+            display: none;
+            position: absolute;
+            background: var(--bleu-fonce);
+            color: var(--blanc);
+            top: 35px;
+            left: 0;
+            min-width: 160px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            list-style-type: none;
+            padding: 0;
+            z-index: 1000;
+        }
+
+        /* Affichage du dropdown lors du survol */
+        .menu li:hover > .dropdown {
+            display: block; 
+        }
+
+        .dropdown li {
+            padding: 10px;
+            border-bottom: 1px solid var(--argent-metal);
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown li:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown li:hover {
+            cursor: pointer;
+        }
+
+        .menu li:hover > a .arrow {
+            transform: rotate(180deg);
+        }
+
+        .arrow {
+            display: inline-block;
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="../accueil/accueil.html">Accueil</a></li>
+            <li><a href="../apropos/apropos.html">A propos</a></li>
+            <li>
+                <a href="#">Jeux <span class="arrow">&#9660;</span></a>
+                <ul class="dropdown">
+                    <li><a href="../apex_legend/apex_legend.html">Apex Legends</a></li>
+                    <li><a href="../genshin/genshinimpact.html">Genshin Impact</a></li>
+                    <li><a href="../subnautica/subnautica.html">Subnautica</a></li>
+                    <li><a href="../dead_cell/dead_cell.html">Dead Cells</a></li>
+                    <li><a href="../valorant/valorant.html">Valorant</a></li>
+                    <li><a href="../sot/sot.html">Sea of Thieves</a></li>
+                    <li><a href="../cyberpunk/cyberpunk.html">Cyberpunk</a></li>
+                </ul>
+            </li>
+            <li><a href="../actu/actualites.html">News</a></li>
+            <li><a href="../detente/detente.html">Détente</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
