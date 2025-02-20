@@ -37,3 +37,19 @@ document.querySelector('.btn-right').addEventListener('click', () => {
     showNextImage();
     resetAutoSlide();
 });
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    let statusMessage = document.getElementById('status-message');
+    statusMessage.textContent = "Message envoyé avec succès !";
+    statusMessage.style.color = "#00ADEF";
+
+    // Réinitialiser le formulaire après soumission
+    this.reset();
+
+    // Supprimer le message après quelques secondes
+    setTimeout(() => {
+        statusMessage.textContent = "";
+    }, 3000);
+});
