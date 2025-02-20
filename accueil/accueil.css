@@ -158,6 +158,89 @@ p:hover {
     filter: brightness(1.1);
 }
 
+/* Conteneur du formulaire */
+.container {
+    background: var(--bleu-fonce);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--bleu-neon);
+    width: 400px;
+    text-align: center;
+}
+
+h2 {
+    color: var(--blanc);
+    margin-bottom: 20px;
+}
+
+/* Champs de formulaire */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 2px solid var(--argent-metal);
+    border-radius: 5px;
+    color: var(--blanc);
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+/* Effet néon sur focus */
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: var(--bleu-neon);
+    box-shadow: 0 0 10px var(--bleu-neon);
+}
+
+/* Labels flottants */
+.input-group label {
+    position: absolute;
+    left: 12px;
+    top: 14px;
+    color: var(--argent-metal);
+    pointer-events: none;
+    transition: 0.3s ease-in-out;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label,
+.input-group textarea:focus + label,
+.input-group textarea:valid + label {
+    top: -12px;
+    left: 10px;
+    color: var(--bleu-neon);
+    font-size: 12px;
+}
+
+/* Bouton */
+.btn {
+    background: var(--bleu-neon);
+    color: var(--fond-noir);
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Effet néon au survol */
+.btn:hover {
+    box-shadow: 0 0 15px var(--bleu-neon);
+}
+
+/* Message de confirmation */
+#status-message {
+    color: var(--argent-metal);
+    margin-top: 15px;
+}
 footer {
     text-align: center;
     padding: 20px;
