@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Legends - Présentation</title>
+    <link rel="stylesheet" href="apex_legend.css">
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+    <script>
+        fetch("../navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar-container").innerHTML = data;
+            });
+    </script>
+
+    <!-- Bannière avec image -->
+    <header class="banner">
+        <img src="bannerapex.webp" alt="Bannière Apex Legends" class="banner-image">
+        <div class="overlay">
+            <h1>Apex Legends</h1>
+            <p>Devenez un champion dans cette bataille royale palpitante et stratégique.</p>
+        </div>
+    </header>
+
+    <!-- Présentation du jeu -->
+    <section class="presentation">
+        <div class="text">
+            <h2>À propos du jeu</h2>
+            <p>
+                Apex Legends est un jeu de bataille royale où des équipes de légendes s'affrontent dans un environnement dynamique et dangereux.
+            </p>
+            <ul>
+                <li><strong>Développeur :</strong> Respawn Entertainment</li>
+                <li><strong>Date de sortie :</strong> 4 février 2019</li>
+                <li><strong>Genres :</strong> Battle Royale, FPS</li>
+                <li><strong>Plateformes :</strong> PC, PS4, PS5, Xbox One, Xbox Series X/S</li>
+                <li><strong>Type de jeu :</strong> Multijoueur</li>
+            </ul>
+        </div>
+        <div class="image">
+            <img src="apexpresentation.webp" alt="Apex Legends">
+        </div>
+    </section>
+    <!-- Gameplay -->
+    <section class="gameplay">
+        <h2>Gameplay</h2>
+        <p>Apex Legends propose des mécaniques de jeu uniques, notamment :</p>
+        <div class="gameplay-grid">
+            <div class="feature">
+                <h3>⚔️ Combat</h3>
+                <p>Affrontez d'autres équipes dans un monde vaste avec des armes, des capacités uniques et une stratégie de groupe.</p>
+                <div class="image">
+                    <img src="combatapex.webp" alt="Apex Legends Combat">
+                </div>
+            </div>
+            <div class="feature">
+                <h3>🌟 Personnalisation</h3>
+                <p>Collectionnez des légendes, personnalisez vos armes et créez des combinaisons tactiques pour dominer la bataille.</p>
+                <div class="image">
+                    <img src="persoapex.webp" alt="Apex Legends Personnalisation">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission principale -->
+    <section class="main-mission">
+        <h2>Mission Principale</h2>
+        <p>Dans *Apex Legends*, le but est simple : survivre et devenir le champion. Choisissez votre légende et faites face à d'autres équipes dans une arène où chaque seconde compte.</p>
+        
+        <div class="mission-details">
+            <div class="mission-item">
+                <h3>🔍 Lutte pour la survie</h3>
+                <p>Affrontez d'autres équipes dans des batailles acharnées jusqu'à ce qu'il n'en reste qu'une seule.</p>
+            </div>
+            <div class="mission-item">
+                <h3>💣 Stratégies de groupe</h3>
+                <p>Coordonnez-vous avec vos coéquipiers pour obtenir une victoire en utilisant des stratégies intelligentes.</p>
+            </div>
+            <div class="mission-item">
+                <h3>⚔️ Devenez un champion</h3>
+                <p>Utilisez vos compétences et vos armes pour dominer l'arène et devenir la dernière équipe debout.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carte de la zone -->
+    <section id="map" class="section map">
+        <img src="apex-legends-map.jpg" alt="Carte Interactive" usemap="#site-map" class="image">
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 GameZone - Tous droits réservés</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,352 @@
+/* Palette de couleurs gaming améliorée */
+:root {
+    --fond-noir: #0A0A0A;
+    --bleu-fonce: #1E2A47;
+    --bleu-neon: #00ADEF;
+    --argent-metal: #C1C1C1;
+    --blanc: #FFFFFF;
+    --gris-clair: #D1D1D1;
+    --rouge-vif: #FA4032;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Corps */
+body {
+    background: var(--fond-noir);
+    color: var(--blanc);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Bannière avec image */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    text-align: center;
+    color: var(--blanc);
+    box-shadow: 0 0 20px rgba(0, 173, 239, 0.8);
+}
+
+.banner h1 {
+    font-size: 4em;
+    color: var(--bleu-neon);
+    text-transform: uppercase;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
+}
+
+.banner p {
+    font-size: 1.5em;
+    color: var(--argent-metal);
+    margin-top: 20px;
+}
+
+/* Carte de Night City */
+.game-map {
+    text-align: center;
+    padding: 100px 10%;
+    background: #1E2A47;
+    color: var(--blanc);
+}
+
+.map-image {
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 173, 239, 0.8);
+    margin-bottom: 20px;
+}
+
+/* Présentation */
+.presentation {
+    display: flex;
+    align-items: center;
+    padding: 100px 10%;
+    gap: 50px;
+    background: linear-gradient(145deg, var(--bleu-fonce), var(--fond-noir));
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease-in-out;
+}
+
+.presentation:hover {
+    transform: scale(1.02);
+}
+
+.presentation .text {
+    max-width: 50%;
+}
+
+.presentation h2 {
+    color: var(--bleu-neon);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.presentation .image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 20px var(--bleu-neon);
+}
+
+/* Personnages */
+.characters {
+    background: var(--bleu-neon);
+    padding: 100px 10%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 20px var(--bleu-neon);
+    border-radius: 15px;
+    margin-bottom: 50px;
+}
+
+.characters h2 {
+    font-size: 3em;
+    color: var(--fond-noir);
+    margin-bottom: 50px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+.character-grid {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.character {
+    position: relative;
+    width: 300px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.character:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px var(--bleu-neon);
+}
+
+.character img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.character .info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--blanc);
+    padding: 15px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    border-radius: 0 0 15px 15px;
+}
+
+.character:hover .info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.character .info h3 {
+    color: var(--bleu-neon);
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.character .info p {
+    font-size: 1.2em;
+    color: var(--argent-metal);
+}
+
+/* Gameplay */
+.gameplay {
+    background: var(--bleu-fonce);
+    padding: 100px 10%;
+    text-align: center;
+    color: var(--blanc);
+    box-shadow: 0 0 20px var(--bleu-neon);
+}
+
+.gameplay h2 {
+    font-size: 2.5em;
+    color: var(--bleu-neon);
+}
+
+.gameplay p {
+    color: var(--argent-metal);
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.gameplay-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.feature {
+    max-width: 30%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px var(--bleu-neon);
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: scale(1.05);
+}
+
+.feature h3 {
+    color: var(--bleu-neon);
+}
+
+.gameplay .image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 20px var(--bleu-neon);
+}
+
+/* Mission Principale */
+.main-mission {
+    background: linear-gradient(145deg, var(--bleu-fonce), var(--fond-noir));
+    padding: 100px 10%;
+    text-align: center;
+    color: var(--blanc);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    margin-bottom: 50px;
+}
+
+.main-mission h2 {
+    font-size: 3em;
+    color: var(--bleu-neon);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.main-mission p {
+    font-size: 1.2em;
+    color: var(--argent-metal);
+    margin-top: 20px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mission-details {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.mission-item {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px var(--bleu-neon);
+    max-width: 30%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--bleu-neon);
+}
+
+.mission-item h3 {
+    color: var(--bleu-neon);
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.mission-item p {
+    font-size: 1.1em;
+    color: var(--argent-metal);
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Style spécifique pour la carte interactive */
+.map img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.map img:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 4px 30px rgba(0, 173, 239, 0.8);
+}
+
+/* Effets de hover sur les zones de la carte */
+area {
+    cursor: pointer;
+    outline: none;
+    transition: opacity 0.3s ease;
+}
+
+area:hover {
+    opacity: 0.7;
+}
+
+/* Footer */
+footer {
+    background: var(--fond-noir);
+    color: var(--gris-clair);
+    text-align: center;
+    padding: 20px;
+    font-size: 1em;
+}
+

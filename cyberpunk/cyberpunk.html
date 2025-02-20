@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk 2077 - Présentation</title>
+    <link rel="stylesheet" href="cyberpunk.css">
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+    <script>
+        fetch("../navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar-container").innerHTML = data;
+            });
+    </script>
+
+    <!-- Bannière avec image -->
+    <header class="banner">
+        <img src="cyberpunk_banner.jpg" alt="Bannière Cyberpunk 2077" class="banner-image">
+        <div class="overlay">
+            <h1>Cyberpunk 2077</h1>
+            <p>Plongez dans Night City, une mégalopole où la technologie et le chaos règnent.</p>
+        </div>
+    </header>
+
+    <!-- Présentation du jeu -->
+    <section class="presentation">
+        <div class="text">
+            <h2>À propos du jeu</h2>
+            <p>
+                Cyberpunk 2077 est un RPG en monde ouvert développé par CD Projekt Red. Vous incarnez <strong>V</strong>, un
+                mercenaire à la recherche d’un implant légendaire conférant l’immortalité, tout en naviguant dans un futur
+                dystopique où les corporations dominent la société.
+            </p>
+            <ul>
+                <li><strong>Développeur :</strong> CD Projekt Red</li>
+                <li><strong>Date de sortie :</strong> 10 décembre 2020</li>
+                <li><strong>Genres :</strong> RPG, Monde Ouvert, Action</li>
+                <li><strong>Plateformes :</strong> PC, PS4, PS5, Xbox One, Xbox Series X/S</li>
+                <li><strong>Type de jeu :</strong> Solo et multijoueur prévu</li>
+            </ul>
+        </div>
+        <div class="image">
+            <img src="presentation.webp" alt="Cyberpunk 2077">
+        </div>
+    </section>
+
+    <!-- Personnages -->
+    <section class="characters">
+        <h2>Personnages Principaux</h2>
+        <div class="character-grid">
+            <div class="character">
+                <img src="v_caracter.jpg" alt="V">
+                <div class="info">
+                    <h3>V</h3>
+                    <p>Le protagoniste du jeu, personnalisable selon votre style de jeu. V peut être un homme, une femme, ou
+                        non binaire, et chaque choix influence l'histoire.</p>
+                    <p><strong>Rôle :</strong> Mercenaire</p>
+                    <p><strong>Compétences :</strong> Maîtrise des armes, hacking, amélioration cybernétique.</p>
+                </div>
+            </div>
+            <div class="character">
+                <img src="johnny.jpg" alt="Johnny Silverhand">
+                <div class="info">
+                    <h3>Johnny Silverhand</h3>
+                    <p>Un ancien rocker rebelle joué par Keanu Reeves. Johnny est un personnage emblématique de l'univers Cyberpunk,
+                        un leader charismatique avec un fort esprit de rébellion.</p>
+                    <p><strong>Rôle :</strong> Antagoniste et guide spirituel</p>
+                    <p><strong>Compétences :</strong> Charisme, hacking, connaissances militaires.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gameplay -->
+    <section class="gameplay">
+        <h2>Gameplay</h2>
+        <p>Cyberpunk 2077 propose une expérience immersive avec de nombreuses possibilités :</p>
+        <div class="gameplay-grid">
+            <div class="feature">
+                <h3>🔫 Combats</h3>
+                <p>Affrontez vos ennemis avec des armes futuristes et des augmentations cybernétiques. Les combats sont rapides, dynamiques et stratégiques.</p>
+            </div>
+            <div class="feature">
+                <h3>🚗 Conduite</h3>
+                <p>Pilotez des véhicules ultra-modifiés à travers Night City. Vous pouvez également personnaliser vos voitures pour des courses endiablées.</p>
+            </div>
+            <div class="feature">
+                <h3>🧠 Cybernétique</h3>
+                <p>Améliorez votre corps avec des implants pour des capacités surhumaines, comme la vision améliorée, la vitesse accrue, et plus encore.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission principale -->
+    <section class="main-mission">
+        <h2>Mission Principale</h2>
+        <p>Dans **Cyberpunk 2077**, vous incarnez V, un mercenaire à la recherche d'un implant légendaire qui confère l'immortalité. Votre mission principale vous plonge dans un univers de trahisons, d'alliances instables et de choix cruciaux. Rejoignez des factions, explorez Night City et faites des choix qui changeront votre destin et celui de la ville.</p>
+        
+        <div class="mission-details">
+            <div class="mission-item">
+                <h3>🔍 Recherche de l'implant</h3>
+                <p>La quête commence lorsque vous entendez parler d'un implant technologique rare et mystérieux, offrant la possibilité d'immortalité. Mais tout ne se passe pas comme prévu...</p>
+            </div>
+            <div class="mission-item">
+                <h3>💣 Alliances et trahisons</h3>
+                <p>Au fil de votre aventure, vous serez amené à faire des choix difficiles concernant les factions et personnages que vous croiserez. Votre loyauté sera mise à l'épreuve.</p>
+            </div>
+            <div class="mission-item">
+                <h3>⚔️ Combat pour la survie</h3>
+                <p>Les ennemis sont nombreux et les dangers de Night City vous poursuivent à chaque coin de rue. Préparez-vous à combattre pour votre vie et celle de vos alliés.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Carte de Night City -->
+    <section class="game-map">
+        <h2>Carte de Night City</h2>
+        <p>Explorez les différents districts de la ville et découvrez leurs particularités.</p>
+
+        <div class="map-container">
+            <img src="night_city_map.jpg" alt="Carte de Night City">
+            
+            <div class="districts">
+                <div class="district">
+                    <h3>🌆 Watson</h3>
+                    <p>Un quartier multiculturel rempli de marchés clandestins et d'industries.</p>
+                </div>
+
+                <div class="district">
+                    <h3>🏙️ Westbrook</h3>
+                    <p>Un secteur huppé abritant les riches et l'élite de Night City.</p>
+                </div>
+
+                <div class="district">
+                    <h3>🔥 Pacifica</h3>
+                    <p>Un quartier dangereux dominé par les gangs, en ruine et abandonné.</p>
+                </div>
+
+                <div class="district">
+                    <h3>🏢 City Center</h3>
+                    <p>Le cœur économique et politique de la ville, rempli de gratte-ciels et de néons.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Multijoueur à venir -->
+    <section class="multiplayer">
+        <h2>Multijoueur à Venir</h2>
+        <p>Le mode multijoueur de **Cyberpunk 2077** est en développement et offrira aux joueurs une expérience immersive où ils pourront s'affronter et coopérer dans l'univers de Night City.</p>
+
+        <div class="multiplayer-details">
+            <!-- Section 1 -->
+            <div class="multiplayer-feature">
+                <div class="text">
+                    <h3>🕹️ Modes de jeu variés</h3>
+                    <p>Attendez-vous à des modes compétitifs et coopératifs, où vous pourrez défier vos amis ou vous allier pour accomplir des missions.</p>
+                </div>
+                <div class="image">
+                    <img src="gameplay.jpg" alt="Mode de jeu">
+                </div>
+            </div>
+
+            <!-- Section 2 -->
+            <div class="multiplayer-feature reverse">
+                <div class="text">
+                    <h3>💥 Combat dynamique</h3>
+                    <p>Des combats en équipe et des affrontements de grande envergure dans des environnements urbains dynamiques.</p>
+                </div>
+                <div class="image">
+                    <img src="combat.webp" alt="Combat dynamique">
+                </div>
+            </div>
+
+            <!-- Section 3 -->
+            <div class="multiplayer-feature">
+                <div class="text">
+                    <h3>🌐 Monde partagé</h3>
+                    <p>Entrez dans un monde partagé avec d'autres joueurs, interagissez, formez des alliances et participez à des événements en temps réel.</p>
+                </div>
+                <div class="image">
+                    <img src="world.webp" alt="Monde partagé">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 GameZone - Tous droits réservés</p>
+    </footer>
+
+</body>
+
+</html>

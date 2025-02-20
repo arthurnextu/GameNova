@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genshin Impact - Présentation</title>
+    <link rel="stylesheet" href="genshinimpact.css">
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+    <script>
+        fetch("../navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar-container").innerHTML = data;
+            });
+    </script>
+
+    <!-- Bannière avec image -->
+    <header class="banner">
+        <img src="genshin-impact-banner.jpg" alt="Bannière Genshin Impact" class="banner-image">
+        <div class="overlay">
+            <h1>Genshin Impact</h1>
+            <p>Explorez Teyvat, un monde vaste où l'aventure, la magie et les mystères vous attendent.</p>
+        </div>
+    </header>
+
+    <!-- Présentation du jeu -->
+    <section class="presentation">
+        <div class="text">
+            <h2>À propos du jeu</h2>
+            <p>
+                Genshin Impact est un RPG en monde ouvert développé par miHoYo. Vous incarnez le Voyageur, un personnage à la recherche de son frère ou de sa sœur dans un monde divisé en régions influencées par les éléments naturels.
+            </p>
+            <ul>
+                <li><strong>Développeur :</strong> miHoYo</li>
+                <li><strong>Date de sortie :</strong> 28 septembre 2020</li>
+                <li><strong>Genres :</strong> RPG, Monde Ouvert, Action</li>
+                <li><strong>Plateformes :</strong> PC, PS4, PS5, iOS, Android</li>
+                <li><strong>Type de jeu :</strong> Solo et multijoueur</li>
+            </ul>
+        </div>
+        <div class="image">
+            <img src="genshin-impact-presentation.jpg" alt="Genshin Impact">
+        </div>
+    </section>
+
+    <!-- Personnages -->
+    <section class="characters">
+        <h2>Personnages Principaux</h2>
+        <div class="character-grid">
+            <div class="character">
+                <img src="voyageur.webp" alt="Le Voyageur">
+                <div class="info">
+                    <h3>Le Voyageur</h3>
+                    <p>Le protagoniste du jeu, un personnage polyvalent qui peut maîtriser plusieurs éléments grâce aux Archons des différentes régions de Teyvat.</p>
+                    <p><strong>Rôle :</strong> Voyageur</p>
+                    <p><strong>Compétences :</strong> Maîtrise des éléments, exploration, combat.</p>
+                </div>
+            </div>
+            <div class="character">
+                <img src="amber.webp" alt="Amber">
+                <div class="info">
+                    <h3>Amber</h3>
+                    <p>Une des premières personnages que vous rencontrerez, Amber est une archère experte en pyro et membre des Chevaliers de Favonius.</p>
+                    <p><strong>Rôle :</strong> Archère, éclaireuse</p>
+                    <p><strong>Compétences :</strong> Tir à l'arc, attaques pyro, exploration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gameplay -->
+    <section class="gameplay">
+        <h2>Gameplay</h2>
+        <p>Genshin Impact propose une expérience immersive avec de nombreuses possibilités :</p>
+        <div class="gameplay-grid">
+            <div class="feature">
+                <h3>⚔️ Combat</h3>
+                <p>Affrontez des ennemis avec des attaques élémentaires et des capacités spéciales. Le système de combat repose sur l'élément et la synergie des personnages.</p>
+                <div class="image">
+                    <img src="combatimpact.jpg" alt="Genshin Impact">
+                </div>
+            </div>
+
+            <div class="feature">
+                <h3>🌍 Exploration</h3>
+                <p>Explorez un vaste monde ouvert avec des paysages variés, des donjons cachés et des secrets à découvrir à chaque recoin.</p>
+                <div class="image">
+                    <img src="exploration.webp" alt="Genshin Impact">
+                </div>
+            </div>
+            <div class="feature">
+                <h3>🌟 Personnalisation</h3>
+                <p>Collectionnez des personnages aux compétences uniques, améliorez-les et découvrez des synergies d'éléments pour créer des combinaisons puissantes.</p>
+                <div class="image">
+                    <img src="genshin-impact-presentation.jpg" alt="Genshin Impact">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission principale -->
+    <section class="main-mission">
+        <h2>Mission Principale</h2>
+        <p>Dans **Genshin Impact**, vous incarnez le Voyageur, un être mystérieux à la recherche de son frère ou de sa sœur. À travers Teyvat, vous rencontrerez de nombreux alliés et ennemis tout en découvrant l'histoire de ce monde magique.</p>
+        
+        <div class="mission-details">
+            <div class="mission-item">
+                <h3>🔍 Recherche des Archons</h3>
+                <p>Votre quête commence par la recherche des Archons, des divinités influençant les éléments. Chaque région révèle des secrets sur l'origine du monde.</p>
+            </div>
+            <div class="mission-item">
+                <h3>💣 Alliances et conflits</h3>
+                <p>Rencontrez des factions et des personnages puissants, certains seront vos alliés, d'autres vos ennemis. Votre choix déterminera l'avenir de Teyvat.</p>
+            </div>
+            <div class="mission-item">
+                <h3>⚔️ Combat pour l'avenir de Teyvat</h3>
+                <p>Combattez contre des ennemis issus de diverses factions tout en protégeant les secrets de Teyvat et l'équilibre des éléments.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carte de Teyvat -->
+    <section id="map" class="section map">
+        <img src="genshin-impact-map.jpg" alt="Carte Interactive" usemap="#site-map" class="image">
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 GameZone - Tous droits réservés</p>
+    </footer>
+
+</body>
+
+</html>

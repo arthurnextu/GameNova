@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant - Présentation</title>
+    <link rel="stylesheet" href="valorant.css">
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+    <script>
+        fetch("../navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar-container").innerHTML = data;
+            });
+    </script>
+    <!-- Bannière avec image -->
+    <header class="banner">
+        <img src="bannervalorant.webp" alt="Bannière Valorant" class="banner-image">
+        <div class="overlay">
+            <h1>Valorant</h1>
+            <p>Un jeu de tir tactique où la stratégie et la précision se rencontrent pour un combat intense.</p>
+        </div>
+    </header>
+
+    <!-- Présentation du jeu -->
+    <section class="presentation">
+        <div class="text">
+            <h2>À propos du jeu</h2>
+            <p>
+                Valorant est un jeu de tir tactique en équipe développé par Riot Games. Inspiré de jeux comme Counter-Strike, il combine des mécaniques de tir de précision avec des personnages uniques ayant des capacités spéciales. Les joueurs s'affrontent en équipes de 5 pour attaquer et défendre des objectifs dans des cartes bien conçues.
+            </p>
+            <ul>
+                <li><strong>Développeur :</strong> Riot Games</li>
+                <li><strong>Date de sortie :</strong> 2 juin 2020</li>
+                <li><strong>Genres :</strong> FPS, Stratégie, Tir tactique</li>
+                <li><strong>Plateformes :</strong> PC</li>
+                <li><strong>Type de jeu :</strong> Multijoueur en ligne</li>
+            </ul>
+        </div>
+        <div class="image">
+            <img src="valorantpresentation.webp" alt="Valorant">
+        </div>
+    </section>
+
+    <!-- Personnages -->
+    <section class="characters">
+        <h2>Agents Principaux</h2>
+        <div class="character-grid">
+            <div class="character">
+                <img src="phoenix.webp" alt="Phoenix">
+                <div class="info">
+                    <h3>Phoenix</h3>
+                    <p>Un agent du Royaume-Uni, Phoenix peut se soigner en lançant des flammes et a la capacité de se ressusciter pour prendre l'avantage sur l'ennemi.</p>
+                    <p><strong>Rôle :</strong> Dueliste</p>
+                    <p><strong>Capacités :</strong> Contrôle du feu, soins, résurrection.</p>
+                </div>
+            </div>
+            <div class="character">
+                <img src="valorant-sage.webp" alt="Sage">
+                <div class="info">
+                    <h3>Sage</h3>
+                    <p>Sage est une agente chinoise qui se concentre sur la guérison, la résurrection de ses coéquipiers et la création de barrières défensives pour contrôler la carte.</p>
+                    <p><strong>Rôle :</strong> Sentinelle</p>
+                    <p><strong>Capacités :</strong> Soins, résurrection, murs de glace.</p>
+                </div>
+            </div>
+            <div class="character">
+                <img src="sova.webp.jpg" alt="Sova">
+                <div class="info">
+                    <h3>Sova</h3>
+                    <p>Sova, un éclaireur russe, est un maître de la reconnaissance, capable de révéler les positions ennemies et d'infliger des dégâts à distance.</p>
+                    <p><strong>Rôle :</strong> Initiateur</p>
+                    <p><strong>Capacités :</strong> Flèche de reconnaissance, drone, tirs pénétrants.</p>
+                </div>
+            </div>
+            <div class="character">
+                <img src="brimstone.webp" alt="Brimstone">
+                <div class="info">
+                    <h3>Brimstone</h3>
+                    <p>Brimstone, un commandant américain, offre un soutien tactique exceptionnel avec des fumigènes, des frappes aériennes et des boosts de vitesse pour son équipe.</p>
+                    <p><strong>Rôle :</strong> Contrôleur</p>
+                    <p><strong>Capacités :</strong> Fumigènes, stimulation, frappe orbitale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Gameplay -->
+    <section class="gameplay">
+        <h2>Gameplay</h2>
+        <p>Valorant combine une mécanique de tir classique avec des capacités spéciales de chaque agent :</p>
+        <div class="gameplay-grid">
+            <div class="feature">
+                <h3>🔫 Tir de précision</h3>
+                <p>La précision est cruciale dans Valorant. Vous devez bien viser et utiliser les armes à bon escient pour éliminer vos ennemis.</p>
+                <div class="image">
+                    <img src="precisionvalorant.webp" alt="Combat Valorant">
+                </div>
+            </div>
+
+            <div class="feature">
+                <h3>🌐 Stratégie d'équipe</h3>
+                <p>Les joueurs doivent travailler en équipe pour coordonner les attaques et défendre les objectifs. La stratégie de groupe est essentielle pour la victoire.</p>
+                <div class="image">
+                    <img src="stratvalorant.webp" alt="Teamplay Valorant">
+                </div>
+            </div>
+            <div class="feature">
+                <h3>⚡ Capacités des agents</h3>
+                <p>Chaque agent a des compétences uniques qui peuvent changer le cours d'une bataille. Utilisez-les judicieusement pour prendre le contrôle de la carte.</p>
+                <div class="image">
+                    <img src="capacitevalorant.webp" alt="Capacités Valorant">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission principale -->
+    <section class="main-mission">
+        <h2>Mission Principale</h2>
+        <p>Dans **Valorant**, vous incarnez un agent de l'une des deux équipes en compétition. L'objectif principal est de soit attaquer, soit défendre un objectif stratégique. Chaque partie est divisée en manches, où les équipes alternent entre attaquant et défenseur, cherchant à planter une bombe ou à empêcher l'autre équipe de le faire.</p>
+        
+        <div class="mission-details">
+            <div class="mission-item">
+                <h3>🎯 Attaque ou Défense</h3>
+                <p>Les attaquants doivent planter un dispositif explosif (Spike) tandis que les défenseurs doivent l'empêcher ou désactiver la bombe. La tactique et la coordination sont la clé.</p>
+            </div>
+            <div class="mission-item">
+                <h3>⚔️ Affrontements stratégiques</h3>
+                <p>Le combat nécessite une parfaite synchronisation entre les membres de l'équipe. L'utilisation des capacités de chaque agent et la gestion des ressources sont cruciales.</p>
+            </div>
+            <div class="mission-item">
+                <h3>🔥 Victoire par élimination</h3>
+                <p>Si une équipe élimine tous les membres de l'équipe adverse avant d'atteindre l'objectif, elle remporte la manche.</p>
+            </div>
+        </div>
+    </section>
+
+        <!-- Carrousel d'image -->
+    <section class="maps-carousel">
+        <h2>Cartes de Valorant</h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="ascent.jpg" alt="Ascent"></div>
+                <div class="swiper-slide"><img src="bind.jpg" alt="Bind"></div>
+                <div class="swiper-slide"><img src="haven.jpg" alt="Haven"></div>
+                <div class="swiper-slide"><img src="split.jpg" alt="Split"></div>
+                <div class="swiper-slide"><img src="icebox.jpg" alt="Icebox"></div>
+                <div class="swiper-slide"><img src="breeze.jpg" alt="Breeze"></div>
+                <div class="swiper-slide"><img src="fracture.jpg" alt="Fracture"></div>
+                <div class="swiper-slide"><img src="pearl.jpg" alt="Pearl"></div>
+                <div class="swiper-slide"><img src="lotus.jpg" alt="Lotus"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 GameZone - Tous droits réservés</p>
+    </footer>
+
+</body>
+
+</html>
