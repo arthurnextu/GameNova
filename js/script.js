@@ -9,7 +9,8 @@ const grid = [
     [null, null, null, null, null, null, null],
     [null, null, null, null, null, null, null],
 ];
-
+let colIndex = 0;
+let rowIndex = 0;
 // Change color evry round
 const toggleColor = () => {
     currentColor = currentColor === 'R' ? 'Y' : 'R';
@@ -38,10 +39,11 @@ putTokenInGrid = ({colIndex, color}) => {
         }
     }
 
-    //checkWin({grid, color});
-
     toggleColor();
     displayGrid();
+    checkWin({grid, color});
+    checkTie({grid, color});
+    endGame({grid, color});
 };
 
 // Check win
@@ -153,13 +155,21 @@ const checkTie = ({grid}) => {
     const isTie = checkIfTie({grid});
     return isTie;
 };
-const checkIfTie = ({grid} = {}) => {
+
+const checkIfTie = ({grid, color} = {}) => {
     for (let rowIndex = 0; rowIndex < grid[0].length; rowIndex++) {
         for (let colIndex = 0; colIndex < grid.length; colIndex++) {
             if (grid[colIndex][rowIndex] === null) {
                 console.log("Toutes les cases ne sont pas remplies");
                 return false;
-            }     
+            } else if (grid[colIndex][rowIndex] !== null) {
+                console.log("Toutes les cases sont remplies");
+                if (checkWin({grid, color}) === false) {
+                    console.log("Egalité !");
+                    // Reset game
+                    resetGame();
+                }
+            }
         }
     }
     return true;
@@ -173,8 +183,7 @@ const endGame = ({grid, color} = {}) => {
         // Reset game
         resetGame();
     } else if (grid[colIndex][rowIndex] !== null) {
-        console.log("Toutes les cases sont remplies, égalité !");
-        checkTie({grid});
+        checkTie({grid, color});
         // Reset game
         resetGame();
     }
@@ -192,7 +201,7 @@ const resetGame = () => {
 };
 
 // Test
-
+/*
 const gridNumbered = [
     ["x0;y0", "x1;y0", "x2;y0", "x3;y0", "x4;y0", "x5;y0", "x6;y0"],
     ["x0;y1", "x1;y1", "x2;y1", "x3;y1", "x4;y1", "x5;y1", "x6;y1"],
@@ -219,12 +228,12 @@ const gridNumbered3 = [
     ["x0;y4", "x1;y4", "x2;y4", "x3;y4", "x4;y4", "x5;y4", "x6;y4"],
     ["x0;y5", "x1;y5", "x2;y5", "x3;y5", "x4;y5", "x5;y5", "x6;y5"]
 ];
-*/
+
 const obj = {
     grid: gridNumbered,
     color: 'R'
 };
-/*
+
 const obj2 = {
     grid: gridNumbered2,
     color: 'red'
@@ -254,7 +263,7 @@ const gridNumbered4 = [
     ["x0;y4", "x1;y4", "x2;y4", "x3;y4", "x4;y4", "x5;y4", "x6;y4"],
     ["x0;y5", "x1;y5", "x2;y5", "x3;y5", "x4;y5", "x5;y5", "x6;y5"]
 ];
-*/
+
 const gridNumbered5 = [
     ["x0;y0", "x1;y0", "x2;y0", "x3;y0", "x4;y0", "x5;y0", "R"],
     ["x0;y1", "x1;y1", "x2;y1", "x3;y1", "x4;y1", "R", "x6;y1"],
@@ -272,12 +281,12 @@ const gridNumbered6 = [
     ["R", "Y", "Y", "Y", "Y", "R", "R"],
     ["R", "R", "Y", "R", "R", "R", "Y"]
 ];
-/*
+
 const obj4 = {
     grid: gridNumbered4,
     color: 'red'
 };
-*/
+
 const obj5 = {
     grid: gridNumbered5,
     color: 'R'
@@ -287,7 +296,7 @@ const obj6 = {
     grid: gridNumbered6,
     color: 'R'
 }; 
-/*
+
 const isTestWin5 = checkDiagTLBR(obj);
 const isTestWin6 = checkDiagTLBR(obj4);
 console.log(false === isTestWin5);
@@ -297,7 +306,7 @@ const isTestWin7 = checkDiagTRBL(obj);
 const isTestWin8 = checkDiagTRBL(obj5);
 console.log(false === isTestWin7);
 console.log(true === isTestWin8);
-*/
+
 //const isTestWin9 = checkWin(obj);
 const isTestWin10 = checkWin(obj5);
 //console.log(false === isTestWin9);
@@ -307,3 +316,4 @@ console.log(true === isTestWin10);
 const isTestTie2 = checkTie(obj6);
 //console.log(false === isTestTie1);
 console.log(true === isTestTie2);
+*/
