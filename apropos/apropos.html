@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos - Game Nova</title>
+    <link rel="stylesheet" href="apropos.css">
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+    <script>
+        fetch("../navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar-container").innerHTML = data;
+            });
+    </script>
+
+    <!-- Bannière -->
+    <header class="banner">
+        <img src="banner.webp" alt="Bannière Game Nova" class="banner-image">
+        <div class="overlay">
+            <h1>À Propos de Game Nova</h1>
+            <p>Un label passionné par la création de jeux vidéo innovants et immersifs.</p>
+        </div>
+    </header>
+
+    <!-- Présentation -->
+    <section class="presentation">
+        <div class="text">
+            <h2>Qui sommes-nous ?</h2>
+            <p>
+                Game Nova est un label de jeux vidéo dédié à offrir des expériences uniques aux joueurs du monde entier. 
+                Nous créons et publions des jeux qui repoussent les limites de l’innovation et de la narration.
+            </p>
+            <ul>
+                <li><strong>Fondation :</strong> 2015</li>
+                <li><strong>Siège :</strong> Paris, France</li>
+                <li><strong>Spécialité :</strong> Développement et édition de jeux vidéo</li>
+                <li><strong>Plateformes :</strong> PC, Consoles & Mobile</li>
+                <li><strong>Communauté :</strong> Plus de 5 millions de joueurs</li>
+            </ul>
+        </div>
+        <div class="image">
+            <img src="gamingpresentation.jpg" alt="Équipe Game Nova">
+        </div>
+    </section>
+
+    <!-- Nos Valeurs -->
+    <section class="values">
+        <h2>Nos Valeurs</h2>
+        <div class="values-grid">
+            <div class="value">
+                <h3>Innovation</h3>
+                <p>Nous explorons sans cesse de nouvelles idées et technologies pour créer des expériences de jeu révolutionnaires.</p>
+            </div>
+            <div class="value">
+                <h3>Passion</h3>
+                <p>Nos équipes sont composées de joueurs passionnés qui aiment créer des mondes captivants et immersifs.</p>
+            </div>
+            <div class="value">
+                <h3>Communauté</h3>
+                <p>Nous plaçons les joueurs au cœur de nos décisions et valorisons leurs retours pour améliorer nos jeux.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nos Jeux -->
+    <section class="our-games">
+        <h2>Nos Jeux</h2>
+        <div class="games-grid">
+            <div class="game">
+                <h3>Valorant</h3>
+                <p>Un FPS futuriste dans un univers spatial où la stratégie et les réflexes sont essentiels.</p>
+            </div>
+            <div class="game">
+                <h3>Genshin</h3>
+                <p>Un RPG épique rempli de quêtes, de mystères et de batailles intenses.</p>
+            </div>
+            <div class="game">
+                <h3>Apex Legend</h3>
+                <p>Un jeu d'exploration en haute mer où l’aventure et les combats navals sont au rendez-vous.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rejoignez-nous -->
+    <section class="join-us">
+        <h2>Rejoignez-nous</h2>
+        <p>Nous sommes toujours à la recherche de talents passionnés !</p>
+        <a href="recrutement.html" class="btn">Découvrir nos offres</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Game Nova - Tous droits réservés</p>
+    </footer>
+
+</body>
+
+</html>
