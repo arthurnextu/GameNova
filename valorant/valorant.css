@@ -287,28 +287,87 @@ body {
     color: var(--gris-clair);
 }
 
-/* Carte de Teyvat */
 .maps-carousel {
+    position: relative;
     text-align: center;
     padding: 50px 0;
+    background: linear-gradient(135deg, #1e293b, #334155); /* Dégradé subtil */
 }
+
 .swiper-container {
+    position: relative;
     width: 80%;
-    height: 400px;
+    height: 100%; /* Légèrement agrandi */
     margin: auto;
+    border-radius: 15px;
+    overflow: hidden; /* Pour éviter que les coins arrondis soient ignorés */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Ombre douce */
 }
+
 .swiper-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
+
+.swiper-slide img:hover {
+    transform: scale(1.05); /* Zoom léger au survol */
+    filter: brightness(1.1);
+}
+
 .swiper-button-next, .swiper-button-prev {
     color: white;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 50%;
+    transition: background 0.3s;
 }
+
 .swiper-pagination-bullet {
-    background-color: white;
+    width: 12px;
+    height: 12px;
+    opacity: 0.7;
+    transition: opacity 0.3s, transform 0.3s;
 }
+
+.swiper-pagination-bullet-active {
+    transform: scale(1.2);
+    opacity: 1;
+}
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    color: white; /* Couleur des icônes */
+    background: transparent; /* Fond totalement transparent */
+    padding: 15px; /* Augmentation de la zone cliquable */
+    border-radius: 50%; /* Rendre le bouton parfaitement rond */
+    width: 50px; /* Taille du bouton */
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.swiper-button-next {
+    right: 15px;
+}
+
+.swiper-button-prev {
+    left: 15px;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    font-size: 22px;
+}
+
+
 
 /* Footer */
 footer {
