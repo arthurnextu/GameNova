@@ -7,7 +7,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
-}
 
 :root {
     --bleu-neon: #00d9ff;
@@ -44,6 +43,7 @@ body {
 .news-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 0 30px var(--bleu-neon);
+
 }
 
 .news-item h2 {
