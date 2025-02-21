@@ -222,11 +222,17 @@ h2 {
 .input-group input:valid + label,
 .input-group textarea:focus + label,
 .input-group textarea:valid + label {
-    top: -12px;
-    left: 10px;
-    color: var(--bleu-neon);
-    font-size: 12px;
+    position: absolute;
+    text-align: left;
+    width: 100%;
+    left: 40%;
+    top: 10px;
+    color: var(--argent-metal);
+    pointer-events: none;
+    transition: 0.3s ease-in-out;
+
 }
+
 
 /* Bouton */
 .btn-from {
