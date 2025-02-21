@@ -1,18 +1,37 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actualités Technologiques</title>
+    <title>À Propos - Game Nova</title>
     <link rel="stylesheet" href="news.css">
 </head>
+
 <body>
+    <div id="navbar-container"></div>
+    <script>
+        fetch("../navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar-container").innerHTML = data;
+            });
+    </script>
+
     <section id="news">
         <h2>Actualités Technologiques</h2>
         <p>Découvrez les dernières actualités dans le domaine de la technologie.</p>
         <div id="news-feed" class="news-container"></div> 
+        <button id="load-more" class="btn">Charger plus</button>
     </section>
 
-    <script src="news.css"></script>
+    <script src="news.js"></script>
 </body>
+
+<footer>
+    <p>&copy; 2025 Game Nova - Tous droits réservés</p>
+</footer>
+
+</body>
+
 </html>
