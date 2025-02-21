@@ -52,7 +52,7 @@
                 <p>Les dernières nouvelles du monde du gaming et des technologies ! Découvrez tout ce qu'il y a de nouveau dans l'industrie, des annonces de mises à jour aux événements majeurs à venir.</p>
                 <p>Suivez les conférences comme l'E3, la Gamescom, et le Tokyo Game Show pour les dernières annonces. Apprenez-en davantage sur les dernières innovations en matière de consoles, accessoires, et VR.</p>
                 <p>Nous vous tiendrons au courant de toutes les informations essentielles, des interviews exclusives avec des développeurs, et des analyses sur les grandes tendances du secteur.</p>
-                <img src="https://via.placeholder.com/1200x500/1e2a47/00adef?text=Actualités+Gaming" alt="Actualités Gaming" class="image">
+                <img src="actugaming.webp" alt="Actualités Gaming" class="image">
             </section>
         
             <section id="detente" class="section detente">
@@ -63,7 +63,26 @@
                 <img src="https://via.placeholder.com/1200x500/1e2a47/00adef?text=Relaxation" alt="Relaxation" class="image">
             </section>
     </main>
-
+    <div class="container">
+        <h2>Contactez-nous</h2>
+        <form id="contact-form">
+            <div class="input-group">
+                <input type="text" id="name" name="name" required>
+                <label for="name">Nom</label>
+            </div>
+            <div class="input-group">
+                <input type="email" id="email" name="email" required>
+                <label for="email">Email</label>
+            </div>
+            <div class="input-group">
+                <textarea id="message" name="message" required></textarea>
+                <label for="message">Message</label>
+            </div>
+            <button type="submit" class="btn">Envoyer</button>
+        </form>
+        <p id="status-message"></p>
+    </div>
+    <script src="accueil.js"></script>
     <footer>
         <p>&copy; 2025 MonSite. Tous droits réservés.</p>
     </footer>
@@ -71,4 +90,4 @@
 </html>
 
 
-$
+
