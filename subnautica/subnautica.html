@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subnautica - Présentation</title>
+    <link rel="stylesheet" href="subnautica.css">
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+    <script>
+        fetch("../navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar-container").innerHTML = data;
+            });
+    </script>
+    <!-- Bannière avec image -->
+    <header class="banner">
+        <img src="bannersub.webp" alt="Bannière Subnautica" class="banner-image">
+        <div class="overlay">
+            <h1>Subnautica</h1>
+            <p>Plongez dans un monde sous-marin fascinant et explorez les mystères d'un océan alien.</p>
+        </div>
+    </header>
+
+    <!-- Présentation du jeu -->
+    <section class="presentation">
+        <div class="text">
+            <h2>À propos du jeu</h2>
+            <p>
+                Subnautica est un jeu d'aventure et de survie en monde ouvert se déroulant dans un océan extraterrestre. Vous incarnez un survivant d'un crash spatial, échoué sur une planète océanique mystérieuse. Explorez les profondeurs, collectez des ressources et découvrez les secrets enfouis sous les vagues.
+            </p>
+            <ul>
+                <li><strong>Développeur :</strong> Unknown Worlds Entertainment</li>
+                <li><strong>Date de sortie :</strong> 23 janvier 2018</li>
+                <li><strong>Genres :</strong> Aventure, Survie, Exploration</li>
+                <li><strong>Plateformes :</strong> PC, Xbox, PS4, Switch</li>
+                <li><strong>Type de jeu :</strong> Solo</li>
+            </ul>
+        </div>
+        <div class="image">
+            <img src="presentationsub.webp" alt="Subnautica">
+        </div>
+    </section>
+
+    <!-- Personnages -->
+    <section class="characters">
+        <h2>Personnages Principaux</h2>
+        <div class="character-grid">
+            <div class="character">
+                <img src="lesurvivant.webp" alt="Le Survivant">
+                <div class="info">
+                    <h3>Le Survivant</h3>
+                    <p>Le protagoniste du jeu, échoué sur la planète 4546B, à la recherche de ressources et de réponses sur son environnement.</p>
+                    <p><strong>Rôle :</strong> Survivant, explorateur</p>
+                    <p><strong>Compétences :</strong> Collecte de ressources, construction, exploration sous-marine.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gameplay -->
+    <section class="gameplay">
+        <h2>Gameplay</h2>
+        <p>Subnautica offre une expérience immersive avec plusieurs aspects de gameplay uniques :</p>
+        <div class="gameplay-grid">
+            <div class="feature">
+                <h3>🌊 Exploration</h3>
+                <p>Explorez un vaste océan peuplé de créatures marines fascinantes et de nombreuses épaves à découvrir.</p>
+                <div class="image">
+                    <img src="exploration.webp" alt="Exploration Subnautica">
+                </div>
+            </div>
+
+            <div class="feature">
+                <h3>⚙️ Construction</h3>
+                <p>Construisez des bases sous-marines et des véhicules pour vous déplacer et survivre dans les profondeurs abyssales.</p>
+                <div class="image">
+                    <img src="construction.webp" alt="Construction dans Subnautica">
+                </div>
+            </div>
+            <div class="feature">
+                <h3>🐉 Créatures</h3>
+                <p>Rencontrez de nombreuses créatures marines, certaines hostiles et d'autres pacifiques, tout en explorant les fonds marins.</p>
+                <div class="image">
+                    <img src="creature.webp" alt="Créatures Subnautica">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission principale -->
+    <section class="main-mission">
+        <h2>Mission Principale</h2>
+        <p>Dans **Subnautica**, vous incarnez un survivant du crash d'un vaisseau spatial. Votre mission principale est de trouver un moyen de vous échapper tout en explorant un monde sous-marin plein de dangers et de mystères.</p>
+        
+        <div class="mission-details">
+            <div class="mission-item">
+                <h3>🔍 Recherche de ressources</h3>
+                <p>Commencez par collecter des ressources pour survivre et vous équiper pour vos aventures sous-marines.</p>
+            </div>
+            <div class="mission-item">
+                <h3>💡 Découverte de secrets</h3>
+                <p>Explorez des épaves et des ruines sous-marines pour découvrir des indices sur la planète et son histoire.</p>
+            </div>
+            <div class="mission-item">
+                <h3>⚒️ Construction d'abris</h3>
+                <p>Construisez des bases sous-marines pour vous protéger des dangers de l'océan et faciliter votre survie à long terme.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carte du monde -->
+    <section id="map" class="section map">
+        <img src="map.webp" alt="Carte de Subnautica" usemap="#site-map" class="image">
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 GameZone - Tous droits réservés</p>
+    </footer>
+
+</body>
+
+</html>

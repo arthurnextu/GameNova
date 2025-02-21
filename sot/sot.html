@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genshin Impact - Présentation</title>
+    <link rel="stylesheet" href="sot.css">
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+    <script>
+        fetch("../navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar-container").innerHTML = data;
+            });
+    </script>
+
+    <!-- Bannière avec image -->
+    <header class="banner">
+        <img src="sotbanner.webp    " alt="Bannière Sot" class="banner-image">
+        <div class="overlay">
+            <h1>Sea Of Thieves</h1>
+            <p>Embarquez avec votre équipage, naviguez sur des mers infinies et devenez le pirate légendaire que le monde attend !</p>
+        </div>
+    </header>
+
+    <section class="game-modes">
+        <h2>Modes de Jeu</h2>
+    
+        <!-- Mode 1: Aventure -->
+        <div class="mode">
+            <div class="mode-text">
+                <h3>Aventure</h3>
+                <p>Participez à des missions où vous et votre équipage explorez les mers, résolvez des énigmes et cherchez des trésors cachés.</p>
+            </div>
+            <div class="mode-image">
+                <img src="adventuresot.webp" alt="Mode Aventure">
+            </div>
+        </div>
+    
+        <!-- Mode 2: Guerre des Équipages -->
+        <div class="mode reverse">
+            <div class="mode-text">
+                <h3>Guerre des Équipages</h3>
+                <p>Affrontez d'autres pirates dans des batailles navales intenses pour la domination des mers et des trésors!</p>
+            </div>
+            <div class="mode-image">
+                <img src="equipagesot.webp" alt="Mode PvP">
+            </div>
+        </div>
+    
+    </section>
+    
+    <section class="presentation">
+        <div class="content">
+            <div class="text">
+                <h2>À propos du jeu</h2>
+                <p>
+                    Sea of Thieves est un jeu d'aventure multijoueur en ligne qui vous plonge dans l'univers d'un pirate, où vous explorez des îles, découvrez des trésors et combattez d'autres équipages en quête de gloire et de richesse.
+                </p>
+                <ul>
+                    <li><strong>Développeur :</strong> Rare</li>
+                    <li><strong>Date de sortie :</strong> 20 mars 2018</li>
+                    <li><strong>Genres :</strong> Action-aventure, Pirate, Multijoueur</li>
+                    <li><strong>Plateformes :</strong> PC, Xbox One, Xbox Series X/S</li>
+                    <li><strong>Type de jeu :</strong> Multijoueur en ligne</li>
+                </ul>
+            </div>
+            <div class="image">
+                <img src="presentationsot.webp" alt="Sea of Thieves">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gameplay -->
+    <section class="gameplay">
+        <h2>Gameplay</h2>
+        <p>Plongez dans des mécaniques de jeu passionnantes :</p>
+        <div class="gameplay-grid">
+            <div class="feature">
+                <h3>⚔️ Combat</h3>
+                <p>Affrontez des créatures mythologiques, d'autres pirates et résolvez des énigmes pour obtenir des trésors.</p>
+            </div>
+            <div class="feature">
+                <h3>🌴 Exploration</h3>
+                <p>Explorez des îles mystérieuses à la recherche de trésors et de secrets bien gardés.</p>
+            </div>
+            <div class="feature">
+                <h3>🚢 Navigation</h3>
+                <p>Conduisez votre bateau à travers l'océan, en utilisant des cartes et des astuces pour survivre aux intempéries.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Mission principale -->
+    <section class="main-mission">
+        <h2>Mission Principale</h2>
+        <p>Dans *Sea of Thieves*, votre objectif est simple : embarquer avec votre équipage, découvrir des trésors et combattre pour devenir le pirate le plus légendaire des mers.</p>
+        <div class="mission-details">
+            <div class="mission-item">
+                <h3>💎 Chasser le Trésor</h3>
+                <p>Trouvez des indices et suivez des cartes pour déterrer des trésors enfouis sur des îles reculées.</p>
+            </div>
+            <div class="mission-item">
+                <h3>⚔️ Combattez les Autres Pirates</h3>
+                <p>Faites face à des pirates rivaux dans des combats en mer pour conquérir leurs trésors et leur butin.</p>
+            </div>
+            <div class="mission-item">
+                <h3>🌊 Survivez aux Épreuves</h3>
+                <p>Évitez les tempêtes, les créatures mythologiques et les pièges naturels tout en cherchant votre fortune.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Carte de la zone -->
+    <section id="map" class="section map">
+        <img src="mapsot.webp" alt="Carte Interactive" usemap="#site-map" class="image">
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 GameZone - Tous droits réservés</p>
+    </footer>
+
+</body>
+
+</html>
+    

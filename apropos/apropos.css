@@ -1,0 +1,239 @@
+/* Importation de la police */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+:root {
+    --bleu-neon: #00d9ff;
+    --bleu-fonce: #0a192f;
+    --blanc: #ffffff;
+    --argent-metal: #a0aab4;
+    --fond-noir: #080d1a;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Corps de la page */
+body {
+    background-color: var(--fond-noir);
+    color: var(--blanc);
+    line-height: 1.6;
+}
+
+/* Bannière avec image */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    text-align: center;
+    color: var(--blanc);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.banner h1 {
+    font-size: 4em;
+    color: var(--bleu-neon);
+    text-transform: uppercase;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
+}
+
+.banner p {
+    font-size: 1.5em;
+    color: var(--argent-metal);
+    margin-top: 20px;
+}
+
+/* Présentation */
+.presentation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 10%;
+    gap: 50px;
+    background: linear-gradient(145deg, var(--bleu-fonce), var(--fond-noir));
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease-in-out;
+}
+
+.presentation:hover {
+    transform: scale(1.02);
+}
+
+.presentation .text {
+    max-width: 50%;
+}
+
+.presentation h2 {
+    font-size: 2.5em;
+    color: var(--bleu-neon);
+    margin-bottom: 20px;
+}
+
+.presentation ul {
+    list-style: none;
+    font-size: 1.2em;
+    color: var(--argent-metal);
+}
+
+.presentation .image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px var(--bleu-neon);
+}
+
+/* Valeurs */
+.values {
+    text-align: center;
+    padding: 80px 10%;
+}
+
+.values h2 {
+    font-size: 2.5em;
+    color: var(--bleu-neon);
+    margin-bottom: 40px;
+}
+
+.values-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.value {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px var(--bleu-neon);
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.value:hover {
+    transform: scale(1.05);
+}
+
+.value img {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+.value h3 {
+    color: var(--bleu-neon);
+}
+
+/* Nos Jeux */
+.our-games {
+    text-align: center;
+    padding: 80px 10%;
+}
+
+.our-games h2 {
+    font-size: 2.5em;
+    color: var(--bleu-neon);
+    margin-bottom: 40px;
+}
+
+.games-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.game {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px var(--bleu-neon);
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.game:hover {
+    transform: scale(1.05);
+}
+
+.game img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.game h3 {
+    color: var(--bleu-neon);
+}
+
+/* Rejoignez-nous */
+.join-us {
+    text-align: center;
+    padding: 80px 10%;
+}
+
+.join-us h2 {
+    font-size: 2.5em;
+    color: var(--bleu-neon);
+    margin-bottom: 20px;
+}
+
+.join-us p {
+    font-size: 1.2em;
+    color: var(--argent-metal);
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: var(--blanc);
+    background: var(--bleu-neon);
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0088cc;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--bleu-fonce);
+    color: var(--argent-metal);
+    font-size: 1em;
+}

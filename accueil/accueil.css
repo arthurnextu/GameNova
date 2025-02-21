@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fond-noir: #0A0A0A;
+    --bleu-fonce: #1E2A47;
+    --bleu-neon: #00ADEF;
+    --argent-metal: #C1C1C1;
+    --blanc: #FFFFFF;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--fond-noir);
+    color: var(--blanc);
+    line-height: 1.6;
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+    background-color: var(--fond-noir);
+}
+
+.carousel-images {
+    display: flex;
+    width: 400%; 
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--bleu-neon);
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.btn-left {
+    left: 10px;
+}
+
+.btn-right {
+    right: 10px;
+}
+
+.btn:hover {
+    box-shadow: 0 0 20px var(--bleu-neon), 0 0 40px var(--bleu-neon), 0 0 60px var(--bleu-neon);
+    border: 2px solid var(--bleu-neon);
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    background-color: var(--bleu-fonce);
+    color: var(--blanc);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 173, 239, 0.3), 0 0 30px rgba(0, 173, 239, 0.1);
+}
+
+/* Effet néon au survol */
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 173, 239, 0.6), 0 0 40px rgba(0, 173, 239, 0.4), 0 0 60px rgba(0, 173, 239, 0.2);
+}
+
+
+#about-us {
+    background-color: var(--bleu-fonce);
+    padding: 40px;
+}
+
+#news {
+    background-color: var(--bleu-neon);
+}
+
+#detente {
+    background-color: var(--bleu-fonce);
+}
+
+h1, h2 {
+    color: var(--blanc);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 3em;
+    position: relative;
+    display: inline-block;
+}
+
+h1::after, h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--bleu-neon);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+h1:hover::after, h2:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+p {
+    color: var(--argent-metal);
+    margin-bottom: 30px;
+    font-size: 1.2em;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+}
+
+p:hover {
+    color: var(--blanc);
+}
+
+.image {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.image:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Conteneur du formulaire */
+.container {
+    background: var(--bleu-fonce);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--bleu-neon);
+    width: 400px;
+    text-align: center;
+}
+
+h2 {
+    color: var(--blanc);
+    margin-bottom: 20px;
+}
+
+/* Champs de formulaire */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 2px solid var(--argent-metal);
+    border-radius: 5px;
+    color: var(--blanc);
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+/* Effet néon sur focus */
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: var(--bleu-neon);
+    box-shadow: 0 0 10px var(--bleu-neon);
+}
+
+/* Labels flottants */
+.input-group label {
+    position: absolute;
+    left: 12px;
+    top: 14px;
+    color: var(--argent-metal);
+    pointer-events: none;
+    transition: 0.3s ease-in-out;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label,
+.input-group textarea:focus + label,
+.input-group textarea:valid + label {
+    top: -12px;
+    left: 10px;
+    color: var(--bleu-neon);
+    font-size: 12px;
+}
+
+/* Bouton */
+.btn {
+    background: var(--bleu-neon);
+    color: var(--fond-noir);
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Effet néon au survol */
+.btn:hover {
+    box-shadow: 0 0 15px var(--bleu-neon);
+}
+
+/* Message de confirmation */
+#status-message {
+    color: var(--argent-metal);
+    margin-top: 15px;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--bleu-fonce);
+    color: var(--argent-metal);
+}
+
+footer p {
+    font-size: 14px;
+}

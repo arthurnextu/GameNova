@@ -1,0 +1,93 @@
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'Accueil</title>
+    <link rel="stylesheet" href="accueil.css">
+</head>
+<body>
+    
+    <header>
+        <div id="navbar-container"></div>
+    <script>
+        fetch("../navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar-container").innerHTML = data;
+            });
+    </script>
+    </header>
+
+    <main>
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="cyberpunk_banner.webp" alt="Cyberpunk">
+                <img src="dead_cells_banner.webp" alt="Dead Cells">
+                <img src="sotbanner.webp" alt="Sot">
+                <img src="subnautica_banner.webp" alt="Subnautica">
+                <img src="genshin-impact-banner.webp" alt="Genshin Impact"> 
+                <img src="apex_legend_banner.webp" alt="Apex Legend">
+                <img src="codbanner.webp" alt="Call Of Duty"
+                
+                <img src="valorant.webp" alt="Valorant">
+            </div>
+            <button class="btn btn-left">&#10094;</button>
+            <button class="btn btn-right">&#10095;</button>
+            </div>
+            <script src="accueil.js"></script>
+
+            <section id="about-us">
+                <h1>À Propos de Game Nova</h1>
+                <p>
+                    Game Nova est un label spécialisé dans les jeux vidéo. Nous vous proposons une sélection des meilleurs titres comme <strong>Valorant</strong>, <strong>Dead Cells</strong>, <strong>Genshin Impact</strong> et <strong>Cyberpunk 2077</strong>.
+                    Plongez dans des mondes immersifs, découvrez des gameplay dynamiques et rejoignez une communauté passionnée.
+                </p>
+            </section>
+        
+            <section id="news" class="section news">
+                <h2>News</h2>
+                <p>Les dernières nouvelles du monde du gaming et des technologies ! Découvrez tout ce qu'il y a de nouveau dans l'industrie, des annonces de mises à jour aux événements majeurs à venir.</p>
+                <p>Suivez les conférences comme l'E3, la Gamescom, et le Tokyo Game Show pour les dernières annonces. Apprenez-en davantage sur les dernières innovations en matière de consoles, accessoires, et VR.</p>
+                <p>Nous vous tiendrons au courant de toutes les informations essentielles, des interviews exclusives avec des développeurs, et des analyses sur les grandes tendances du secteur.</p>
+                <img src="actugaming.webp" alt="Actualités Gaming" class="image">
+            </section>
+        
+            <section id="detente" class="section detente">
+                <h2>Détente</h2>
+                <p>Après une longue session de jeu, il est essentiel de se détendre. Nous avons compilé des astuces pour vous aider à vous relaxer : des playlists chill, des conseils de méditation, et des articles sur le bien-être.</p>
+                <p>Si vous cherchez des moyens d'améliorer votre bien-être mental et physique, nous vous proposons des ressources pour mieux gérer le stress, améliorer votre sommeil et trouver un équilibre entre votre passion pour les jeux vidéo et votre santé.</p>
+                <p>Rejoignez-nous pour découvrir les meilleures méthodes de relaxation après une journée intense de gaming !</p>
+                <img src="https://via.placeholder.com/1200x500/1e2a47/00adef?text=Relaxation" alt="Relaxation" class="image">
+            </section>
+    </main>
+    <div class="container">
+        <h2>Contactez-nous</h2>
+        <form id="contact-form">
+            <div class="input-group">
+                <input type="text" id="name" name="name" required>
+                <label for="name">Nom</label>
+            </div>
+            <div class="input-group">
+                <input type="email" id="email" name="email" required>
+                <label for="email">Email</label>
+            </div>
+            <div class="input-group">
+                <textarea id="message" name="message" required></textarea>
+                <label for="message">Message</label>
+            </div>
+            <button type="submit" class="btn">Envoyer</button>
+        </form>
+        <p id="status-message"></p>
+    </div>
+    <script src="accueil.js"></script>
+    <footer>
+        <p>&copy; 2025 MonSite. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
+
+
+
