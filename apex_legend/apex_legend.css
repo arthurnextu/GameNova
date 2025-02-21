@@ -287,21 +287,7 @@ body {
     color: var(--gris-clairl);
 }
 
-/* Carte de Teyvat */
-.map {
-    padding: 50px 10%;
-    background: var(--fond-noir);
-    text-align: center;
-    margin-bottom: 50px;
-}
 
-.map img {
-    width: 100%;
-    max-width: 1200px;
-    height: auto;
-    box-shadow: 0 0 20px var(--rouge-apex);
-    border-radius: 15px;
-}
 
 /* Footer */
 footer {
