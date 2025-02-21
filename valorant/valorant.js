@@ -1,40 +1,55 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const carouselImages = document.querySelector('.carousel-images');
-    const images = carouselImages.querySelectorAll('img');
-    const prevButton = document.querySelector('.prev-button');
-    const nextButton = document.querySelector('.next-button');
+const carouselImages = document.querySelector('.carousel-images');
+const images = carouselImages.querySelectorAll('img');
+let currentIndex = 0;
+const totalImages = images.length;
+let autoSlideInterval;
 
-    let currentIndex = 0;
-    const totalImages = images.length;
+// Fonction pour passer à l'image suivante
+function showNextImage() {
+    currentIndex = (currentIndex + 1) % totalImages;
+    const offset = -currentIndex * 100;
+    carouselImages.style.transform = `translateX(${offset}vw)`;
+}
 
-    // Fonction pour afficher l'image suivante
-    function showNextImage() {
-        currentIndex = (currentIndex + 1) % totalImages;
-        updateCarouselPosition();
-    }
+// Fonction pour passer à l'image précédente
+function showPrevImage() {
+    currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+    const offset = -currentIndex * 100;
+    carouselImages.style.transform = `translateX(${offset}vw)`;
+}
 
-    // Fonction pour afficher l'image précédente
-    function showPrevImage() {
-        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-        updateCarouselPosition();
-    }
+// Fonction pour redémarrer le défilement automatique
+function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    autoSlideInterval = setInterval(showNextImage, 7000); 
+}
 
-    // Fonction pour mettre à jour la position du carrousel
-    function updateCarouselPosition() {
-        const offset = -currentIndex * 100;
-        carouselImages.style.transform = `translateX(${offset}%)`;
-    }
+// Défilement automatique toutes les 7 secondes
+autoSlideInterval = setInterval(showNextImage, 7000);
 
-    // Ajouter un événement sur le bouton précédent
-    prevButton.addEventListener('click', () => {
-        showPrevImage();
-    });
+// Navigation manuelle
+document.querySelector('.btn-left').addEventListener('click', () => {
+    showPrevImage();
+    resetAutoSlide();
+});
 
-    // Ajouter un événement sur le bouton suivant
-    nextButton.addEventListener('click', () => {
-        showNextImage();
-    });
+document.querySelector('.btn-right').addEventListener('click', () => {
+    showNextImage();
+    resetAutoSlide();
+});
 
-    // Défilement automatique des images toutes les 5 secondes
-    setInterval(showNextImage, 5000);
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    let statusMessage = document.getElementById('status-message');
+    statusMessage.textContent = "Message envoyé avec succès !";
+    statusMessage.style.color = "#00ADEF";
+
+    // Réinitialiser le formulaire après soumission
+    this.reset();
+
+    // Supprimer le message après quelques secondes
+    setTimeout(() => {
+        statusMessage.textContent = "";
+    }, 3000);
 });
