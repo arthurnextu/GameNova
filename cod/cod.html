@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call of Duty: Warzone - Présentation</title>
+    <link rel="stylesheet" href="cod.css">
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+    <script>
+        fetch("../navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar-container").innerHTML = data;
+            });
+    </script>
+
+    <!-- Bannière avec image -->
+    <header class="banner">
+        <img src="bannercod.webp" alt="Bannière Warzone" class="banner-image">
+        <div class="overlay">
+            <h1>Call of Duty: Warzone</h1>
+            <p>Plongez dans l'expérience Battle Royale ultime avec des combats intenses et stratégiques.</p>
+        </div>
+    </header>
+
+    <!-- Présentation du jeu -->
+    <section class="presentation">
+        <div class="content">
+            <div class="text">
+                <h2>À propos du jeu</h2>
+                <p>
+                    Call of Duty: Warzone est un jeu de bataille royale se déroulant dans un vaste monde ouvert avec des mécaniques de combat dynamiques.
+                </p>
+                <ul>
+                    <li><strong>Développeur :</strong> Infinity Ward, Raven Software</li>
+                    <li><strong>Date de sortie :</strong> 10 mars 2020</li>
+                    <li><strong>Genres :</strong> Battle Royale, FPS</li>
+                    <li><strong>Plateformes :</strong> PC, PS4, PS5, Xbox One, Xbox Series X/S</li>
+                    <li><strong>Type de jeu :</strong> Multijoueur</li>
+                </ul>
+            </div>
+            <div class="image">
+                <img src="presentation.webp" alt="Warzone">
+            </div>
+        </div>
+    </section>
+
+    <!-- Modes de jeu -->
+    <section class="game-modes">
+        <h2>Modes de Jeu</h2>
+        <div class="modes-grid">
+            <div class="mode">
+                <div class="info">
+                    <h3>Battle Royale</h3>
+                    <p>Affrontez jusqu'à 150 joueurs dans un combat à mort où seule la dernière équipe survivante l'emporte.</p>
+                </div>
+                <img src="br.webp" alt="Battle Royale">
+            </div>
+            <div class="mode">
+                <div class="info">
+                    <h3>Resurgence</h3>
+                    <p>Un mode de jeu intense où les joueurs réapparaissent tant qu'un coéquipier est encore en vie.</p>
+                </div>
+                <img src="resurgence.webp" alt="Resurgence">
+            </div>
+        </div>
+    </section>
+
+    <!-- Gameplay -->
+    <section class="gameplay">
+        <h2>Gameplay</h2>
+        <p>Découvrez des mécaniques de jeu immersives et stratégiques :</p>
+        <div class="gameplay-grid">
+            <div class="feature">
+                <h3>⚔️ Combat</h3>
+                <p>Utilisez un large éventail d'armes et d'équipements tactiques pour éliminer vos adversaires.</p>
+            </div>
+            <div class="feature">
+                <h3>🚁 Exploration</h3>
+                <p>Parcourez la gigantesque carte de Warzone en utilisant des véhicules terrestres et aériens.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission principale -->
+    <section class="main-mission">
+        <h2>Mission Principale</h2>
+        <p>Dans *Call of Duty: Warzone*, votre objectif est simple : survivre et dominer le champ de bataille.</p>
+        <div class="mission-details">
+            <div class="mission-item">
+                <h3>🔍 Survie</h3>
+                <p>Éliminez vos ennemis et restez en vie jusqu'à la fin pour être couronné vainqueur.</p>
+            </div>
+            <div class="mission-item">
+                <h3>💣 Travail d'équipe</h3>
+                <p>Travaillez en synergie avec votre escouade pour élaborer les meilleures stratégies.</p>
+            </div>
+            <div class="mission-item">
+                <h3>⚔️ Dominez</h3>
+                <p>Utilisez des tactiques et des équipements puissants pour prendre l'avantage sur vos adversaires.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carte de la zone -->
+    <section id="map" class="section map">
+        <img src="map.webp" alt="Carte Interactive" usemap="#site-map" class="image">
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 GameZone - Tous droits réservés</p>
+    </footer>
+</body>
+
+</html>
