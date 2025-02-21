@@ -17,6 +17,10 @@ body {
     color: var(--blanc);
     line-height: 1.6;
 }
+html, body {
+    overflow-x: hidden;
+}
+
 .carousel {
     position: relative;
     width: 100%;
