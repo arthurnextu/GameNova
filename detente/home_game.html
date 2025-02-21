@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <div id="navbar-container"></div>
+            <script>
+                fetch("../navbar.html")
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById("navbar-container").innerHTML = data;
+                    });
+            </script>
+        </div>
+    </div>
+    <div class="container">
+        <h2> Nos jeux </h2>
+        <div class="game">
+            <h3> Connect 4 </h3>
+            <p> Le but du jeu est d'aligner 4 pions de sa couleur horizontalement, verticalement ou diagonalement. </p>
+            <a href="game.html"> Jouer </a>
+        </div>
+
+</body>
+</html>
