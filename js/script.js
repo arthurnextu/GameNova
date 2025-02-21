@@ -1,4 +1,3 @@
-
 // Define HTML els
 // Set up player and color
 let currentColor = 'R';
